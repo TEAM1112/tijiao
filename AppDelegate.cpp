@@ -5,7 +5,7 @@
 #include "LoadingScene.h"
 USING_NS_CC;
 
-static cocos2d::Size designResolutionSize = cocos2d::Size(960, 640);
+static cocos2d::Size designResolutionSize = cocos2d::Size(6555, 640);
 static cocos2d::Size smallResolutionSize = cocos2d::Size(480, 320);
 static cocos2d::Size mediumResolutionSize = cocos2d::Size(1024, 768);
 static cocos2d::Size largeResolutionSize = cocos2d::Size(2048, 1536);
@@ -57,9 +57,9 @@ bool AppDelegate::applicationDidFinishLaunching() {
     director->setAnimationInterval(1.0 / 60);
 
     // Set the design resolution
-    glview->setDesignResolutionSize(designResolutionSize.width, designResolutionSize.height, ResolutionPolicy::NO_BORDER);//ÉèÖÃÉè¼Æ·Ö±æÂÊ ,·Ö±æÂÊÊÊÅä·½Ê½ Ã¿Ì×ÊÊÅä·½Ê½¶ÔÓ¦²»Í¬µÄËõ·ÅÒò×Ó Ó³Éäµ½ÊÖ»úÆÁÄ»£¬µÚ¶þ¸ö¹ý³Ì
-    Size frameSize = glview->getFrameSize();  //»ñÈ¡ÆÁÄ»µÄSIZE  ÔÚ43ÐÐÉèÖÃÁËÆÁÄ»´óÐ¡ÎªÉè¼Æ·Ö±æÂÊµÄÊÇ´óÐ¡£¬ÓÉÉè¼Æ·Ö±æÂÊ×ªÎªÆÁÄ»·Ö±æÂÊ µÚ¶þ¸ö¹ý³Ì 
-    // if the frame's height is larger than the height of medium size.   µÚÒ»¸ö¹ý³Ì£¬ÉèÖÃÉè¼Æ·Ö±æÂÊ ÏÂÃæµÄ´úÂëÓÐ´ýÑÐ¾¿
+    glview->setDesignResolutionSize(designResolutionSize.width, designResolutionSize.height, ResolutionPolicy::NO_BORDER);//è®¾ç½®è®¾è®¡åˆ†è¾¨çŽ‡ ,åˆ†è¾¨çŽ‡é€‚é…æ–¹å¼ æ¯å¥—é€‚é…æ–¹å¼å¯¹åº”ä¸åŒçš„ç¼©æ”¾å› å­ æ˜ å°„åˆ°æ‰‹æœºå±å¹•ï¼Œç¬¬äºŒä¸ªè¿‡ç¨‹
+    Size frameSize = glview->getFrameSize();  //èŽ·å–å±å¹•çš„SIZE  åœ¨43è¡Œè®¾ç½®äº†å±å¹•å¤§å°ä¸ºè®¾è®¡åˆ†è¾¨çŽ‡çš„æ˜¯å¤§å°ï¼Œç”±è®¾è®¡åˆ†è¾¨çŽ‡è½¬ä¸ºå±å¹•åˆ†è¾¨çŽ‡ ç¬¬äºŒä¸ªè¿‡ç¨‹ 
+    // if the frame's height is larger than the height of medium size.   ç¬¬ä¸€ä¸ªè¿‡ç¨‹ï¼Œè®¾ç½®è®¾è®¡åˆ†è¾¨çŽ‡ ä¸‹é¢çš„ä»£ç æœ‰å¾…ç ”ç©¶
     if (frameSize.height > mediumResolutionSize.height)
     {        
         director->setContentScaleFactor(MIN(largeResolutionSize.height/designResolutionSize.height, largeResolutionSize.width/designResolutionSize.width));
